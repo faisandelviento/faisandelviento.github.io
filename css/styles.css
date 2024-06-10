@@ -1,0 +1,265 @@
+svg {
+  max-width: 100%;
+  height: auto;
+  margin: 15px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: PostFont;
+  src: url(/assets/Post.otf);
+}
+body,
+html {
+  margin: 0px;
+  padding: 0;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  font-family: PostFont, monospace, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 30px 0px 0px;
+  font-size: 50px;
+}
+
+.cabecera {
+  display: flex;
+  flex-direction: row;
+}
+.cabecera h2 {
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  margin: 3px;
+  padding-left: 20px;
+}
+
+#AC1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.audio img {
+  width: 120px;
+}
+.audio p {
+  text-align: justify;
+}
+
+.playb {
+  background-color: grey;
+  border: 1px solid lightblue;
+  text-align: center;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  color: lightblue;
+  cursor: pointer;
+}
+
+#audios {
+  padding: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+
+.reproductor {
+  display: flex;
+  flex-direction: row;
+}
+.reproductor h2 {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.barra {
+  margin-top: 13px;
+  position: relative;
+  height: 5px;
+  width: 100%;
+  background: #ccc;
+  border: solid 1px #ccc;
+}
+.barra div {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: yellow;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: lightblue;
+  padding: 20px;
+}
+footer .footer-content {
+  margin: 0 auto;
+  color: white;
+}
+
+#AC2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+}
+
+.container-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-video video {
+  width: 640px;
+  height: 480px;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav .navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+nav .navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+nav .navbar-menu li {
+  margin-right: 20px;
+}
+nav .navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav .navbar-menu li a:hover {
+  cursor: pointer;
+  color: yellow;
+}
+
+#contacto {
+  margin: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contacto .contact-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+#contacto .contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+#contacto .contact-form form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+#contacto .contact-form form .form-group label {
+  margin-bottom: 5px;
+}
+#contacto .contact-form form .form-group input,
+#contacto .contact-form form .form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#contacto .contact-form form .form-group textarea {
+  resize: vertical;
+}
+#contacto .contact-form form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+}
+#contacto .contact-form form button:hover {
+  background-color: rgb(88, 126, 191);
+}
+#contacto .contact-social {
+  position: relative;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#contacto .contact-social img {
+  width: 40vw;
+  max-width: 470px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#contacto .contact-social .social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#contacto .contact-social .social-icons h2 {
+  margin-bottom: 20px;
+}
+#contacto .contact-social .social-icons .social-icon {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #000;
+}
+#contacto .contact-social .social-icons .social-icon:hover {
+  color: lightblue;
+}
+
+@media screen and (max-width: 800px) {
+  #audios {
+    padding: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+  }
+  #contacto {
+    flex-direction: column;
+    margin: 0px;
+  }
+  #contacto .contact-form {
+    width: auto;
+    margin-bottom: 3rem;
+  }
+  #contacto .contact-form .form-group input,
+  #contacto .contact-form .form-group textarea {
+    width: 80vw;
+  }
+  #contacto .contact-social {
+    width: 80vw;
+    margin-bottom: 2rem;
+  }
+  #contacto .contact-social img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
